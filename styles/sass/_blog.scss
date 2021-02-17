@@ -1,0 +1,260 @@
+//blog page header section styles
+.blog-header {
+  background: url(../assets/blog-header.jpg);
+  background-size: cover;
+}
+
+.blog-container {
+  display: flex;
+
+  aside {
+    width: 40%;
+  }
+
+  main {
+  width: 60%;
+  }
+}
+
+//blog page side menu & contents styles
+.blog-aside-container {
+  background-color:$dark-blue;
+  padding: 5%;
+  width: 90%;
+
+  img {
+    position: relative;
+    left: -30%;
+    bottom: 50px;
+    width: 125%;
+    height: auto;
+  }
+
+  h3 {
+    color:$yellow;
+    font-size: $small;
+    font-family: 'IM Fell English', serif;
+    line-height: 2.9rem;
+    letter-spacing: 0.8px;
+    margin: 0;
+  }
+
+  p, ul {
+    color:$white;
+    line-height: 1.4rem;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+  }
+
+  div:nth-of-type(1) {
+    margin-bottom: 30px;
+  }
+
+  ul li:before { 
+  content:"• ";
+  font-size:10pt; 
+  padding-right: 10px;
+  }
+}
+
+//blog page main section styles
+.blog-main {
+  border-left: 2px solid $yellow;
+  border-bottom: 2px solid $yellow;
+  padding-left: 18px;
+
+  img {
+    width: 100%;
+    position: relative;
+    bottom: 100px;
+    box-shadow: -20px 20px$yellow;
+  }
+}
+
+//blog page article styles in main section
+article .wrapper {
+  padding-top: -20px;
+  padding-bottom: 75px;
+
+  h2 {
+  margin-top: 0;
+  color: $dark-blue;
+  }
+
+  p {
+  font-size: $x-small;
+  }
+}
+
+//blog comment styles
+.blog-comment {
+  display: flex;
+  margin-bottom: 70px;
+
+  img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 0 30px 0 80px;
+  }
+
+  p {
+    margin: 0;
+    padding-right: 50px;
+    line-height: 1.4rem;
+
+    span{
+      color: $dark-blue;
+      line-height: 2rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.blog-section h2 {
+  margin-left: 100px;
+  margin-top: 70px;
+  color: $dark-blue;
+}
+
+//blog page form styles
+.blog-container .blog-contact {
+  position: static;
+  background-color:$light-blue;
+  padding-left: 50px;
+
+  input{
+    background-color: $light-blue;
+  }
+
+  input::placeholder { 
+    color: $black;
+    opacity: 1; 
+  }
+
+  .blog-container .blog-contact button {
+    color:$yellow;
+    background-color:$dark-blue;
+    border: none;
+  }
+}
+
+@media (max-width: 900px) {
+//tablet size
+
+//blog-section styles
+  .blog-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -32.5%;
+    padding-top: 50px;
+
+    h2 {
+      font-size: $small;
+      margin-left: 0;
+      margin-top: 0;
+      color: $dark-blue;
+    }
+
+    p {
+      font-size: $x-small;
+    }
+  }
+
+//blog comment styles
+  .blog-comment img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 0 20px 0 0 ;
+  }
+
+  .blog-container .blog-contact {
+    position: static;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+//moblie size
+
+  .blog-header h1 {
+    padding-top: 20px;
+  }
+
+  .blog-container {
+    flex-direction: column;
+
+    aside{
+      width: 100%;
+    }
+  }
+
+  .blog-aside-container {
+    text-align: center;
+    background-color:$dark-blue;
+    padding: 20px;
+    width: 100%;
+
+    img {
+      display: none;
+      position: static;
+      left: auto;
+      bottom: 50px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .blog-container main {
+    width: 90%;
+  }
+
+  .blog-main {
+    width: 100%;
+    border: 2px solid $yellow;
+    padding: 18px;
+    text-align: center;
+
+    h2 {
+      padding-top: 20px;
+      font-size: $small;
+    }
+
+    img {
+      width: 100%;
+      position: static;
+      bottom: 0px;
+      box-shadow: none;
+    }
+  }
+
+  article .wrapper {
+    padding-bottom: 20px;
+  }
+
+  .blog-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: auto;
+    padding-top: 50px;
+
+    img {
+      width: 75px;
+      height: 75px;
+    }
+  }
+
+  .blog-comment {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+}
